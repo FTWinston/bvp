@@ -199,7 +199,7 @@
 		}
 
 		a {
-			color: _palette($p, fg-bold);
+			color: _palette($p, link);
 
 			&:hover {
 				color: _palette($p, accent);
@@ -211,7 +211,7 @@
 		}
 
 		h1, h2, h3, h4, h5, h6 {
-			color: _palette($p, fg-bold);
+			color: _palette($p, link);
 		}
 
 		blockquote {
