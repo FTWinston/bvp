@@ -12,7 +12,7 @@ const Footer = () => (
         <li><a href="#" className="icon style2 fa-envelope"><span className="label">Email</span></a></li>
       </ul>
       */}
-      <p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      <p>&copy; BVP Church of Scotland. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
     </div>
   </footer>
 )
