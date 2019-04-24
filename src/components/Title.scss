@@ -1,0 +1,29 @@
+.siteTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @media (min-width: 1025px) {
+    font-size: calc(1em + 0.019 * (100vw - 1025px));
+  }
+
+  @media (max-height: 450px) {
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 1em;
+  }
+}
+
+.siteTitle__image {
+  width: 3.7em;
+  max-width: 25%;
+  height: 100%;
+}
+
+.siteTitle__main, .siteTitle__subtitle {
+  font-size: 2.25em;
+  margin: 0 0 0 0.35em;
+  text-align: left;
+}
