@@ -1,0 +1,70 @@
+backend:
+  name: github
+  repo: FTWinston/bvp
+
+media_folder: static/uploads
+public_folder: uploads
+
+collections:
+  - name: section
+    label: Home page sections
+    folder: content/sections
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: order, label: "Sort order", widget: number, valueType: int }
+      - { name: body, label: Body, widget: markdown }
+  - name: page
+    label: Pages
+    folder: content/pages
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: order, label: "Sort order", widget: number, valueType: int }
+      - { name: body, label: Body, widget: markdown }
+  - name: article
+    label: Article
+    folder: content/articles
+    create: true
+    fields:
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: magazine
+    label: Magazine
+    folder: content/herald
+    create: true
+    fields:
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: pdf, label: PDF, widget: file }
+  - name: pages
+    label: "Fixed pages"
+    files:
+      - file: "content/fixed/herald.md"
+        label: "Herald page"
+        name: "herald"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: "Blurb", name: blurb, widget: object, fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}]}
+          - {label: Body, name: body, widget: markdown}
+      - file: "content/fixed/articles.md"
+        label: "Articles page"
+        name: "articles"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          - label: Contact Entries
+            name: contact_entries
+            widget: list
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
