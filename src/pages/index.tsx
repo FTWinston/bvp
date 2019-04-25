@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Banner from '../components/Banner'
 import ContactForm from '../components/ContactForm'
-import Footer from '../components/Footer'
 import Gallery from '../components/Gallery'
 import Grid from '../components/Grid'
 import Spotlight from '../components/Spotlight'
@@ -45,8 +44,6 @@ const IndexPage = () => (
     <Grid />
 
     <ContactForm />
-
-    <Footer />
 
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>

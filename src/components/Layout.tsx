@@ -9,6 +9,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import SmoothScroll from 'smooth-scroll'
 import '../sass/main.scss'
+import Footer from './Footer';
 
 interface IState {
   loaded: boolean;
@@ -45,7 +46,10 @@ class Layout extends React.Component<{}, IState> {
 
     return <div id="wrapper" className="divided">
       {helmet}
+      
       {this.props.children}
+      
+      <Footer />
     </div>
   }
 }
