@@ -1,10 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Title from '../components/Title';
 
 export default ({ data }) => {
+  const summary = data.summary.nodes[0];
+  const issues = data.issues.nodes;
+
   return (
     <Layout>
       <SEO title="Herald archive" />
@@ -13,12 +16,12 @@ export default ({ data }) => {
         <div className="inner">
           <Title />
 
-          <h2>Herald magazine archive</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-          
+          <h2>{summary.frontmatter.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: summary.html }} />
+
           <div className="items style1 medium onscroll-fade-in">
-            {/*<h4>{data.allMarkdownRemark.totalCount} issues</h4>*/}
-            {data.allMarkdownRemark.edges.map(({node}, index: number) => (
+            {/*<h4>{issues.totalCount} issues</h4>*/}
+            {issues.map((node, index: number) => (
               <a href={node.frontmatter.pdf} key={index}>
                 <span className="icon style2 major fa-save"></span>
                 <p className="major">
@@ -35,18 +38,29 @@ export default ({ data }) => {
 
 export const query = graphql`
 query {
-  allMarkdownRemark(
+  summary: allMarkdownRemark(
+    filter: { fileAbsolutePath: { regex:"/.*/fixed/herald.md/" } },
+    limit: 1
+  )
+  {
+    nodes {
+      frontmatter{
+        title
+      }
+      html
+		}
+  }
+  
+  issues: allMarkdownRemark(
     filter: { fileAbsolutePath: { regex:"/.*/herald/.*/" } },
     sort: { fields: [frontmatter___date], order: DESC },
     limit: 12
   )
   {
-    edges {
-      node {
-        frontmatter{
-          title
-          pdf
-        }
+    nodes {
+      frontmatter{
+        title
+        pdf
       }
     }
     totalCount
