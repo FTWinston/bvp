@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import './Title.scss';
 
@@ -29,7 +29,7 @@ const Title = () => (
     <TitleImage />
 
     <header className="siteTitle__text">
-      <h1 className="siteTitle__main">Balshagray Victoria&nbsp;Park</h1>
+      <h1 className="siteTitle__main"><Link to="/">Balshagray Victoria&nbsp;Park</Link></h1>
       <h2 className="siteTitle__subtitle">Church of Scotland</h2>
     </header>
   </div>
