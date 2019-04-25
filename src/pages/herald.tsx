@@ -35,21 +35,21 @@ export default ({ data }) => {
 
 export const query = graphql`
 query {
-    allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex:"/.*/herald/.*/" } },
-        sort: { fields: [frontmatter___date], order: DESC },
-        limit: 12
-    )
-    {
-        edges {
-            node {
-                frontmatter{
-                title
-                pdf
-                }
-            }
+  allMarkdownRemark(
+    filter: { fileAbsolutePath: { regex:"/.*/herald/.*/" } },
+    sort: { fields: [frontmatter___date], order: DESC },
+    limit: 12
+  )
+  {
+    edges {
+      node {
+        frontmatter{
+          title
+          pdf
         }
-        totalCount
+      }
     }
+    totalCount
+  }
 }
 `

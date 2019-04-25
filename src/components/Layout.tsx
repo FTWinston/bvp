@@ -10,12 +10,16 @@ import Helmet from 'react-helmet'
 import '../sass/main.scss'
 import Footer from './Footer';
 
+interface IProps {
+  isHomePage?: boolean;
+}
+
 interface IState {
   loaded: boolean;
 }
 
-class Layout extends React.Component<{}, IState> {
-  constructor(props: {}) {
+class Layout extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
 
     this.state = {
@@ -23,17 +27,23 @@ class Layout extends React.Component<{}, IState> {
     }
   }
 
-  private timerID: NodeJS.Timer;
+  private timerID?: NodeJS.Timer;
 
   componentDidMount() {
     this.timerID = setTimeout(
-      () => this.setState({ loaded: true }),
+      () => {
+        this.setState({ loaded: true })
+        this.timerID = undefined;
+      },
       100
     );
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    if (this.timerID !== undefined) {
+      clearInterval(this.timerID);
+      this.timerID = undefined;
+    }
   }
 
   render() {
@@ -46,7 +56,9 @@ class Layout extends React.Component<{}, IState> {
       
       {this.props.children}
       
-      <Footer />
+      <Footer
+        includeHomeLink={this.props.isHomePage !== true}
+      />
     </div>
   }
 }

@@ -1,8 +1,14 @@
 import React from 'react'
+import { Link } from 'gatsby';
 
-const Footer = () => (
+const Footer = ({ includeHomeLink }) => (
   <footer className="wrapper style1 align-center">
     <div className="inner">
+      {includeHomeLink
+        ? <Link to="/">Return to the main page</Link>
+        : undefined
+      }
+
       {/*
       <ul className="icons">
         <li><a href="#" className="icon style2 fa-twitter"><span className="label">Twitter</span></a></li>
