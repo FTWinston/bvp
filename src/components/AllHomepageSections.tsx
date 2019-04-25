@@ -32,8 +32,8 @@ export default () =>
   
       const title = <h2>{node.frontmatter.title}</h2>
       const content = <div dangerouslySetInnerHTML={{ __html: node.html }} />
-  
-      return node.image === null
+      
+      return node.frontmatter.image === null
         ? (
           <TextSection
             id={id}
