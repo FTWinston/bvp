@@ -24,12 +24,11 @@ export default () => (
         <li><a href="assets/images/spotlight01.jpg" className="button">Learn More</a></li>
       </ul>
     </Spotlight>
-*/}
 
     <Gallery />
 
     <Grid />
-
+*/}
     <ContactForm />
   </Layout>
 )
