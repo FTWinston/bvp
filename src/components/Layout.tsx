@@ -7,7 +7,6 @@
 
 import React from 'react'
 import Helmet from 'react-helmet'
-import SmoothScroll from 'smooth-scroll'
 import '../sass/main.scss'
 import Footer from './Footer';
 
@@ -31,8 +30,6 @@ class Layout extends React.Component<{}, IState> {
       () => this.setState({ loaded: true }),
       100
     );
-
-    new SmoothScroll('a[href*="#"]', { speed: 1500 });
   }
 
   componentWillUnmount() {

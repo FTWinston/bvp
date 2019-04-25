@@ -22,12 +22,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "smooth-scroll": "^16.0.3"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.8",
-    "@types/smooth-scroll": "^14.2.0",
     "prettier": "^1.17.0"
   },
   "keywords": [
