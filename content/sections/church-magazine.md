@@ -8,6 +8,4 @@ buttons:
   - target: '#articles'
     text: Read articles
 ---
-Articles from the latest edition of our church magazine, the Herald, are available below.
-
-An archive of recent editions is available [here](/herald).
+Articles from the latest edition of our church magazine, the Herald, are available below. An archive of recent editions is also available to download.
