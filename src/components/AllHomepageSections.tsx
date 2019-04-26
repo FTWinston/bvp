@@ -7,16 +7,20 @@ import TextSection from './TextSection';
 export default () => 
 <StaticQuery
   query={graphql`
-  query {
+    query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex:"/.*/sections/.*/" } },
       sort: {  fields: [ frontmatter___order ], order: ASC }
     )
     {
       nodes {
-        frontmatter{
+        frontmatter {
           title
           image
+          buttons {
+            text
+            target
+          }
         }
         html
       }
@@ -32,6 +36,15 @@ export default () =>
   
       const title = <h2>{node.frontmatter.title}</h2>
       const content = <div dangerouslySetInnerHTML={{ __html: node.html }} />
+      const buttons = node.frontmatter.buttons === null
+        ? undefined
+        : <ul className="actions">
+        {node.frontmatter.buttons.map((btn, index: number) =>
+          <li key={index}>
+            <a href={btn.target} className="button big wide smooth-scroll-middle">{btn.text}</a>
+          </li>
+        )}
+      </ul>
       
       return node.frontmatter.image === null
         ? (
@@ -41,6 +54,7 @@ export default () =>
           >
             {title}
             {content}
+            {buttons}
           </TextSection>
         )
         : (
@@ -52,6 +66,7 @@ export default () =>
         >
           {title}
           {content}
+          {buttons}
         </Spotlight>
         )
     })
