@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
+import Button from './Button';
 import Spotlight from './Spotlight'
 import TextSection from './TextSection';
 
@@ -40,9 +41,7 @@ export default () =>
         ? undefined
         : <ul className="actions">
         {node.frontmatter.buttons.map((btn, index: number) =>
-          <li key={index}>
-            <a href={btn.target} className="button big wide smooth-scroll-middle">{btn.text}</a>
-          </li>
+          <Button key={index} target={btn.target}>{btn.text}</Button>
         )}
       </ul>
       
