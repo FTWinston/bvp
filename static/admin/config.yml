@@ -16,6 +16,11 @@ collections:
       - { name: body, label: Body, widget: markdown }
       - { name: image, label: Image, widget: image, required: false }
       - { name: order, label: "Sort order", widget: number, valueType: int }
+      - { name: buttons, label: "Buttons", widget: list, fields: [
+            { name: target, label: "Target URL or ID", widget: string },
+            { name: text, label: Text, widget: string }
+          ]
+        }
   - name: page
     label: Pages
     label_singular: Page
