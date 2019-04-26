@@ -37,7 +37,7 @@ export default () =>
   
       const title = <h2>{node.frontmatter.title}</h2>
       const content = <div dangerouslySetInnerHTML={{ __html: node.html }} />
-      const buttons = node.frontmatter.buttons === null
+      const buttons = node.frontmatter.buttons == null
         ? undefined
         : <ul className="actions">
         {node.frontmatter.buttons.map((btn, index: number) =>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Title from '../components/Title';
@@ -20,7 +20,6 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: summary.html }} />
 
           <div className="items style1 medium onscroll-fade-in">
-            {/*<h4>{issues.totalCount} issues</h4>*/}
             {issues.map((node, index: number) => (
               <a href={node.frontmatter.pdf} key={index}>
                 <span className="icon style2 major fa-save"></span>
