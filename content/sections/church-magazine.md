@@ -1,13 +1,12 @@
 ---
 title: Church Magazine
 image: /uploads/herald.jpg
-order: 2
+order: 3
 buttons:
-  - text: View Archive
-    target: /herald
-  - text: Read articles
-    target: '#articles'
-    
+  - target: /herald
+    text: View Archive
+  - target: '#articles'
+    text: Read articles
 ---
 Articles from the latest edition of our church magazine, the Herald, are available below.
 
