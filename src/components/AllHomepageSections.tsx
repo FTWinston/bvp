@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Button from './Button';
-import Spotlight from './Spotlight'
-import TextSection from './TextSection';
+import PageSection from './PageSection'
+import { FluidObject } from 'gatsby-image';
 
 export default () => 
 <StaticQuery
@@ -38,8 +38,24 @@ export default () =>
     let isFirst = true;
 
     return data.allMarkdownRemark.nodes.map((node, index: number) => {
-      const id = isFirst ? 'first' : undefined;
-      isFirst = false;
+      const id = isFirst ? 'first' : undefined
+      isFirst = false
+
+      let classes: string, innerClass: string
+      let image: FluidObject | undefined
+      
+      if (node.frontmatter.image == null) {
+        innerClass = 'inner' // would be good to rewrite the styling to avoid the need for this
+        classes = 'wrapper style1 align-center'
+        image = undefined;
+      }
+      else {
+        innerClass = 'content'
+        classes = index % 2 === 0
+          ? 'spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in'
+          : 'spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in'
+        image = node.frontmatter.image.childImageSharp.fluid
+      }
   
       const title = <h2>{node.frontmatter.title}</h2>
       const content = <div dangerouslySetInnerHTML={{ __html: node.html }} />
@@ -51,29 +67,19 @@ export default () =>
         )}
       </ul>
       
-      return node.frontmatter.image === null
-        ? (
-          <TextSection
-            id={id}
-            key={index}
-          >
-            {title}
-            {content}
-            {buttons}
-          </TextSection>
-        )
-        : (
-        <Spotlight
-          orient={index % 2 === 0 ? 'right' : 'left'}
-          image={node.frontmatter.image.childImageSharp.fluid}
+      return (
+        <PageSection
+          className={classes}
+          innerClassName={innerClass}
+          image={image}
           id={id}
           key={index}
         >
           {title}
           {content}
           {buttons}
-        </Spotlight>
-        )
+        </PageSection>
+      )
     })
   }}
 />
