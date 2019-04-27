@@ -11,6 +11,7 @@
       options: {
         name: `uploads`,
         path: `${__dirname}/static/uploads`,
+        ignore: [`**/*\.pdf`], // ignore files ending in .pdf
       },
     },
     {
