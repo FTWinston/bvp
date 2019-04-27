@@ -8,7 +8,7 @@ import TextSection from './TextSection';
 export default () => 
 <StaticQuery
   query={graphql`
-    query {
+  query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex:"/.*/sections/.*/" } },
       sort: {  fields: [ frontmatter___order ], order: ASC }
