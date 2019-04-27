@@ -1,7 +1,7 @@
 ---
 title: Services at BVP
 image: /uploads/chancel.jpg
-order: 1
+order: 2
 ---
 We meet for morning worship on Sundays at 11am. During our morning services, we have the J-Team for primary school children, and a Bible Class for secondary school children. Creche facilities are available for babies and toddlers.
 

@@ -1,7 +1,7 @@
 ---
 title: Where to find us
 image: /uploads/map.png
-order: 2
+order: 3
 buttons:
   - target: 'https://goo.gl/maps/Wn8uDkGzwq5jtT8a9'
     text: View on Google Maps

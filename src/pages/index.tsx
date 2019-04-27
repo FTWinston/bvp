@@ -2,7 +2,6 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import Banner from '../components/Banner'
 import ContactForm from '../components/ContactForm'
 import Gallery from '../components/Gallery'
 import Grid from '../components/Grid'
@@ -11,8 +10,6 @@ import AllHomepageSections from '../components/AllHomepageSections';
 export default () => (
   <Layout isHomePage={true}>
     <SEO title='Home' keywords={[`Balshagray`, `Victoria`, `Park`, `Church`, `BVP`]} />
-
-    <Banner />
     
     <AllHomepageSections />
 

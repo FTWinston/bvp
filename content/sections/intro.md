@@ -1,6 +1,9 @@
 ---
+title: Intro
+image: /uploads/banner.jpg
+order: 1
 buttons:
-  - target: '#first'
+  - target: '#section2'
     text: Explore
 ---
 Welcome to BVP. We are a Church of Scotland located in the west end of Glasgow.

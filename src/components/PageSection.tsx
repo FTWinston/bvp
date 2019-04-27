@@ -1,5 +1,6 @@
 import React from 'react'
 import Img, { FluidObject } from 'gatsby-image';
+import './PageSection.scss';
 
 interface IProps {
   className: string;
