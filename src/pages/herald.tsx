@@ -21,7 +21,7 @@ export default ({ data }) => {
 
           <div className="items style1 medium onscroll-fade-in">
             {issues.map((node, index: number) => (
-              <a href={node.frontmatter.pdf} key={index}>
+              <a href={node.frontmatter.pdf.absolutePath} key={index}>
                 <span className="icon style2 major fa-save"></span>
                 <p className="major">
                   {node.frontmatter.title}
@@ -59,7 +59,9 @@ query {
     nodes {
       frontmatter{
         title
-        pdf
+        pdf {
+          absolutePath
+        }
       }
     }
     totalCount

@@ -17,7 +17,13 @@ export default () =>
       nodes {
         frontmatter {
           title
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           buttons {
             text
             target
@@ -59,7 +65,7 @@ export default () =>
         : (
         <Spotlight
           orient={index % 2 === 0 ? 'right' : 'left'}
-          image={node.frontmatter.image}
+          image={node.frontmatter.image.childImageSharp.fluid}
           id={id}
           key={index}
         >
