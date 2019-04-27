@@ -1,9 +1,10 @@
 import React from 'react'
+import Img, { FluidObject } from 'gatsby-image';
 
 interface IProps {
   orient: 'left' | 'right';
   id?: string;
-  image: string;
+  image: FluidObject;
   children: any;
 }
 
@@ -17,9 +18,7 @@ const Spotlight = (props: IProps) => {
     <div className="content">
       {props.children}
     </div>
-    <div className="image">
-      <img src={props.image} alt="" />
-    </div>
+    <Img fluid={props.image} className="image" />
   </section>
   )
 }
