@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 
 import Button from './Button';
 import PageSection from './PageSection'
+import Title from './Title'
 import { FluidObject } from 'gatsby-image';
 
 export default () => 
@@ -35,29 +36,32 @@ export default () =>
   }
   `}
   render={data => {
-    let isFirst = true;
-
     return data.allMarkdownRemark.nodes.map((node, index: number) => {
-      const id = isFirst ? 'first' : undefined
-      isFirst = false
-
+      const id = `section${index+1}`
       let classes: string, innerClass: string
       let image: FluidObject | undefined
       
       if (node.frontmatter.image == null) {
-        innerClass = 'inner' // would be good to rewrite the styling to avoid the need for this
+        innerClass = 'inner' // would be good to rewrite the styling to avoid the need for this property
         classes = 'wrapper style1 align-center'
         image = undefined;
       }
       else {
         innerClass = 'content'
-        classes = index % 2 === 0
-          ? 'spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in'
-          : 'spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in'
+        if (index === 0) {
+          classes = 'banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right';
+        }
+        else {
+          classes = index % 2 === 0
+            ? 'spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in'
+            : 'spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in'
+        }
         image = node.frontmatter.image.childImageSharp.fluid
       }
   
-      const title = <h2>{node.frontmatter.title}</h2>
+      const title = index === 0
+        ? <Title />
+        : <h2>{node.frontmatter.title}</h2>
       const content = <div dangerouslySetInnerHTML={{ __html: node.html }} />
       const buttons = node.frontmatter.buttons == null
         ? undefined

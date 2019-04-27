@@ -51,16 +51,6 @@ collections:
     label: "Fixed pages"
     label_singular: "Fixed page"
     files:
-      - file: "content/fixed/intro.md"
-        label: "Main page intro"
-        name: "intro"
-        fields:
-          - {label: Body, name: body, widget: markdown}
-          - { name: buttons, label: "Buttons", widget: list, fields: [
-              { name: text, label: Text, widget: string },
-              { name: target, label: "Target URL or ID", widget: string }
-            ]
-          }
       - file: "content/fixed/herald.md"
         label: "Herald page"
         name: "herald"
