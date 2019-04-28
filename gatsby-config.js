@@ -4,7 +4,6 @@
     description: `Balshagray Victoria Park`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,17 +16,18 @@
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/content`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `markdown-pages`,
+        path: `${__dirname}/content`,
       },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -48,7 +48,7 @@
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
