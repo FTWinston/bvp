@@ -297,7 +297,6 @@
 
 		@include orientation(portrait) {
 			@include vendor('flex-direction', 'column-reverse');
-			text-align: center;
 
 			.content {
 				padding-left: 10vw;
