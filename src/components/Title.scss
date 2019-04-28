@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  font-size: 1.65vw; // fill 40vw
 
-  @media (min-width: 1025px) {
-    font-size: calc(1em + 0.019 * (100vw - 1025px));
+  @media (orientation: portrait) {
+    font-size: 3.3vw; // fill 80vw
   }
 
   @media (max-height: 450px) {
