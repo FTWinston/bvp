@@ -49,7 +49,7 @@ export default () =>
       else {
         innerClass = 'content'
         if (index === 0) {
-          classes = 'banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right';
+          classes = 'banner orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right';
         }
         else {
           classes = index % 2 === 0
