@@ -1,6 +1,6 @@
 ---
 title: Intro
-image: /uploads/banner.jpg
+image: /uploads/building-outside.jpg
 order: 1
 buttons:
   - target: '#section2'
