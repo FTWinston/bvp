@@ -299,7 +299,6 @@
 
 			@include orientation(portrait) {
 				@include vendor('flex-direction', 'column-reverse');
-				text-align: center !important;
 
 				.content {
 					width: 100%;
