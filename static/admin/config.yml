@@ -32,16 +32,6 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: order, label: "Sort order", widget: number, valueType: int }
-      - { name: body, label: Body, widget: markdown }
-  - name: article
-    label: Articles
-    label_singular: Article
-    folder: content/articles
-    create: true
-    fields:
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   - name: magazine
     label: "Magazine"
