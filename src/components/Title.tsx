@@ -20,6 +20,7 @@ const TitleImage = () => (
       fluid={data.placeholderImage.childImageSharp.fluid}
       imgStyle={{objectFit: 'contain'}}
       className="siteTitle__image"
+      critical={true}
     />}
   />
 )

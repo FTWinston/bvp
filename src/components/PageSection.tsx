@@ -9,12 +9,13 @@ interface IProps {
   id?: string;
   image?: FluidObject;
   children?: React.ReactNode;
+  isFirst: boolean;
 }
 
 const PageSection = (props: IProps) => {
   const image = props.image === undefined
     ? undefined
-    : <Img fluid={props.image} className="image" />
+    : <Img fluid={props.image} className="image" critical={props.isFirst} />
 
   return (
   <section className={props.className} id={props.id}>
