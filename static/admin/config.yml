@@ -27,7 +27,7 @@ collections:
   - name: page
     label: Pages
     label_singular: Page
-    description: "Pages are only accessible if they are linked from somewhere on the main page."
+    description: "The address of a page is its title, with spaces replaced with dashes. Remember to link to a page (e.g. from the main page), or nobody will find it."
     folder: content/pages
     create: true
     fields:
@@ -47,29 +47,3 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: pdf, label: PDF, widget: file }
-  - name: fixed
-    label: "Fixed pages"
-    label_singular: "Fixed page"
-    files:
-      - file: "content/fixed/herald.md"
-        label: "Herald page"
-        name: "herald"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-      - file: "content/fixed/articles.md"
-        label: "Articles page"
-        name: "articles"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Text
-                name: text
-                widget: text
