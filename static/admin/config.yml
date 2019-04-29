@@ -4,11 +4,14 @@ backend:
 
 media_folder: static/uploads
 public_folder: uploads
+site_url: "https://www.bvp.org.uk"
 
 collections:
   - name: section
     label: Home page sections
     label_singular: Home page section
+    description: "The main page includes all sections listed here, ordered by their Sort Order property."
+    summary: "{{order}} - {{title}}"
     folder: content/sections
     create: true
     fields:
@@ -24,6 +27,7 @@ collections:
   - name: page
     label: Pages
     label_singular: Page
+    description: "Pages are only accessible if they are linked from somewhere on the main page."
     folder: content/pages
     create: true
     fields:
@@ -41,6 +45,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: magazine
     label: "Magazine"
+    description: "Magazines are listed on the archive page, and the most-recently dated one is accessible from the main page."
     folder: content/herald
     create: true
     fields:
