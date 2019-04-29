@@ -33,6 +33,11 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - name: functionality
+        label: "Special functionality"
+        widget: select
+        options: ["list magazines", "list who's who"]
+        required: false
   - name: magazine
     label: "Magazine"
     description: "Magazines are listed on the archive page, and the most-recently dated one is accessible from the main page."
