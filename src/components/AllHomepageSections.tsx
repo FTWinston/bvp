@@ -78,6 +78,7 @@ export default () =>
           image={image}
           id={id}
           key={index}
+          isFirst={index === 0}
         >
           {title}
           {content}
