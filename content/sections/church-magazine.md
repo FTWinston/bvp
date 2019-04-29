@@ -3,7 +3,7 @@ title: Church Magazine
 image: /uploads/herald.jpg
 order: 4
 buttons:
-  - target: /herald
+  - target: /herald-magazine-archive
     text: View Archive
   - target: '#articles'
     text: Read articles
