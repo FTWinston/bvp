@@ -28,3 +28,10 @@
   margin: 0 0 0 0.35em;
   text-align: left;
 }
+
+
+
+// Needed for spacing header on standalone pages
+.wrapper.style1 > .inner {
+  padding-top: 3rem !important;
+}
