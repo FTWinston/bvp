@@ -20,7 +20,7 @@ export default () =>
           title
           image {
             childImageSharp {
-              fluid(maxWidth: 960) {
+              fluid(maxWidth: 1600) {
                 ...GatsbyImageSharpFluid
               }
             }
