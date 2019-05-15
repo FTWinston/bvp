@@ -328,7 +328,7 @@
 						}
 
 						.image {
-							height: 50vh;
+							height: calc(50vh - 56px); // 56px comes from this https://dev.to/peiche/100vh-behavior-on-chrome-2hm8
 						}
 					}
 				}
