@@ -3,7 +3,7 @@ import React from 'react'
 const ContactForm = () => (
   <section className="wrapper style1 align-center">
     <div className="inner medium">
-      <form method="post" name="contact" data-netlify="true">
+      <form method="post" name="contact" data-netlify="true" data-netlify-recaptcha="true">
         <div className="fields">
           <div className="field half">
             <label htmlFor="name">Your Name</label>
@@ -18,6 +18,7 @@ const ContactForm = () => (
             <textarea name="message" id="message" rows={8} />
           </div>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <ul className="actions special">
           <li><input type="submit" name="submit" value="Send Message" /></li>
         </ul>
