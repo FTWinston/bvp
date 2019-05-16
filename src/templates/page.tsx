@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Title from '../components/Title';
 import HeraldArchive from '../components/HeraldArchive';
+import ContactForm from '../components/ContactForm';
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -12,6 +13,9 @@ export default ({ data }) => {
   switch (post.frontmatter.functionality) {
     case 'list magazines':
       functionality = <HeraldArchive />
+      break
+    case 'contact form':
+      functionality = <ContactForm />
       break
   }
 
