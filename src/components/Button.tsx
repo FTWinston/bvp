@@ -4,7 +4,7 @@ import HeraldButton from './HeraldButton';
 interface IProps {
   target: string;
   children: string;
-  functionality: undefined | 'latest magazine';
+  functionality?: 'latest magazine';
 }
 
 const Button = (props: IProps) => {
