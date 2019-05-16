@@ -1,9 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bvp",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
@@ -31,10 +29,6 @@
     "@types/react-helmet": "^5.0.8",
     "prettier": "^1.17.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -45,9 +39,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ftwinston/bvp"
   }
 }
