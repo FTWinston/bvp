@@ -1,11 +1,11 @@
 ---
-title: Church Magazine
+title: Church magazine
 image: /uploads/herald.jpg
 order: 4
 buttons:
-  - target: /herald-magazine-archive
+  - functionality: latest magazine
+    target: /herald-magazine-archive
     text: Read now
-    functionality: latest magazine
   - target: /herald-magazine-archive
     text: View Archive
 ---
