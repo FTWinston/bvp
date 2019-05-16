@@ -40,6 +40,7 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { name: listed, label: "List on home page", widget: boolean, default: true }
       - name: functionality
         label: "Special functionality"
         widget: select
