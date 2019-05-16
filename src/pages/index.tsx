@@ -2,7 +2,6 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import ContactForm from '../components/ContactForm'
 import AllHomepageSections from '../components/AllHomepageSections';
 
 export default () => (
@@ -10,7 +9,5 @@ export default () => (
     <SEO title='Home' keywords={[`Balshagray`, `Victoria`, `Park`, `Church`, `BVP`]} />
     
     <AllHomepageSections />
-
-    <ContactForm />
   </Layout>
 )
