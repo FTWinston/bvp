@@ -9,4 +9,4 @@ buttons:
   - target: /herald-magazine-archive
     text: View Archive
 ---
-Articles from the latest edition of our church magazine, the Herald, are available below. An archive of recent editions is also available to download.
+Our monthly church magazine is available to read online. You can access the latest edition here, and an archive of recent editions is available to download.
