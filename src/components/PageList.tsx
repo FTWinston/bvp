@@ -29,6 +29,10 @@ const PageList = () => (
           <th>Page name</th>
           <th>Address</th>
         </tr>
+        <tr>
+            <td>Home page</td>
+            <td><a href="/">/</a></td>
+        </tr>
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
           <tr key={index}>
             <td>{node.frontmatter.title}</td>
