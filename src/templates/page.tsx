@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Title from '../components/Title';
 import HeraldArchive from '../components/HeraldArchive';
 import ContactForm from '../components/ContactForm';
+import PageList from '../components/PageList';
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -16,6 +17,9 @@ export default ({ data }) => {
       break
     case 'contact form':
       functionality = <ContactForm />
+      break
+    case 'list all pages':
+      functionality = <PageList />
       break
   }
 
