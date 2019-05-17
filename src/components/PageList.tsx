@@ -25,20 +25,24 @@ const PageList = () => (
     `}
     render={data => (
       <table>
-        <tr>
-          <th>Page name</th>
-          <th>Address</th>
-        </tr>
-        <tr>
-            <td>Home page</td>
-            <td><a href="/">/</a></td>
-        </tr>
-        {data.allMarkdownRemark.nodes.map((node, index: number) => (
-          <tr key={index}>
-            <td>{node.frontmatter.title}</td>
-            <td><a href={node.fields.slug}>{node.fields.slug}</a></td>
+        <thead>
+          <tr>
+            <th>Page name</th>
+            <th>Address</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          <tr>
+              <td>Home page</td>
+              <td><a href="/">/</a></td>
+          </tr>
+          {data.allMarkdownRemark.nodes.map((node, index: number) => (
+            <tr key={index}>
+              <td>{node.frontmatter.title}</td>
+              <td><a href={node.fields.slug}>{node.fields.slug}</a></td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     )}
   />
