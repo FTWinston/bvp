@@ -27,11 +27,11 @@ export default ({ data }) => {
     <Layout>
       <SEO title={post.frontmatter.title} />
 
-      <section className="wrapper style1 align-center">
+      <section className="wrapper style1">
         <div className="inner">
           <Title />
 
-          <h2>{post.frontmatter.title}</h2>
+          <h2 className="align-center">{post.frontmatter.title}</h2>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           {functionality}
         </div>
