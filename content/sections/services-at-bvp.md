@@ -1,5 +1,5 @@
 ---
-title: Services at BVP
+title: Church Services
 image: /uploads/chancel-cropped.jpg
 order: 2
 ---
