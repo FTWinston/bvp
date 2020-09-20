@@ -1,9 +1,9 @@
 ---
-title: Church Services
+title: Services at BVP
 image: /uploads/chancel-cropped.jpg
 order: 2
 ---
-## _All meetings are currently suspended due to the covid-19 lockdown. We will meet again, as soon as it is safe to do so._
+## *We have now resumed our morning services, in a socially distanced manner. See the church magazine for details.*
 
 We meet for morning worship on Sundays at 11am. During our morning services, we have the J-Team for primary school children, and a Bible Class for secondary school children. Creche facilities are available for babies and toddlers.
 
