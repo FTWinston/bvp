@@ -53,9 +53,7 @@ export default () =>
           classes = 'banner orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right';
         }
         else {
-          classes = index % 2 === 0
-            ? 'spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in'
-            : 'spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in'
+          classes = `spotlight style1 orient-${index % 2 === 0 ? 'left' : 'right'} content-align-left image-position-center onscroll-image-fade-in`
         }
         image = node.frontmatter.image.childImageSharp.fluid
       }

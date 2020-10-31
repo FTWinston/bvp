@@ -1,20 +1,22 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-const HeraldArchive = () => (
+const RecordingArchive = () => (
   <StaticQuery
     query={graphql`
       query {
         allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex:"/.*/herald/.*/" } },
+          filter: { fileAbsolutePath: { regex:"/.*/recordings/.*/" } },
           sort: { fields: [frontmatter___date], order: DESC },
-          limit: 12
+          limit: 6
         )
         {
           nodes {
             frontmatter{
-              title
-              pdf
+              date(formatString: "dddd, Do MMMM YYYY")
+              mp3 {
+                publicURL
+              }
             }
           }
         }
@@ -23,10 +25,10 @@ const HeraldArchive = () => (
     render={data => (
       <div className="items style1 medium onscroll-fade-in">
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
-          <a href={node.frontmatter.pdf} key={index}>
-            <span className="icon style2 major fa-file-pdf-o"></span>
+          <a href={node.frontmatter.mp3.publicURL} key={index}>
+            <span className="icon style2 major fa-file-audio-o"></span>
             <p className="major">
-              {node.frontmatter.title}
+              {node.frontmatter.date}
             </p>
           </a>
         ))}
@@ -35,4 +37,4 @@ const HeraldArchive = () => (
   />
 )
 
-export default HeraldArchive
+export default RecordingArchive
