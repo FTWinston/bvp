@@ -17,7 +17,7 @@ const RecordingButton = (props: IProps) => (
         {
           nodes {
             frontmatter{
-              date
+              date(formatString: "Do MMMM")
               mp3 {
                 publicURL
               }
