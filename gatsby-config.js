@@ -2,6 +2,7 @@
   siteMetadata: {
     title: `BVP Church of Scotland`,
     description: `Balshagray Victoria Park`,
+    siteUrl: `https://www.bvp.org.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -64,6 +65,58 @@
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }        
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: `Recording of church service`,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.frontmatter.mp3.publicURL,
+                  guid: site.siteMetadata.siteUrl + node.frontmatter.mp3.publicURL,
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: { fileAbsolutePath: { regex:"/.*/recordings/.*/" } },
+                  sort: { fields: [frontmatter___date], order: DESC },
+                  limit: 6
+                ) {
+                  nodes {
+                    frontmatter{
+                      title: date(formatString: "dddd, Do MMMM YYYY")
+                      date
+                      mp3 {
+                        publicURL
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Services at BVP Church of Scotland",
+          },
+        ],
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
