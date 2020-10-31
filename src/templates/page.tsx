@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import Title from '../components/Title';
 import HeraldArchive from '../components/HeraldArchive';
+import RecordingArchive from '../components/RecordingArchive';
 import ContactForm from '../components/ContactForm';
 import PageList from '../components/PageList';
 
@@ -14,6 +15,9 @@ export default ({ data }) => {
   switch (post.frontmatter.functionality) {
     case 'list magazines':
       functionality = <HeraldArchive />
+      break
+    case 'list recordings':
+      functionality = <RecordingArchive />
       break
     case 'contact form':
       functionality = <ContactForm />

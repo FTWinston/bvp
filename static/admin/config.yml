@@ -11,7 +11,6 @@ collections:
     label: Home page sections
     label_singular: Home page section
     description: "The main page includes all sections listed here, ordered by their Sort Order property."
-    summary: "{{order}} - {{title}}"
     folder: content/sections
     create: true
     fields:
@@ -26,11 +25,12 @@ collections:
               name: functionality,
               label: "Special functionality",
               widget: select,
-              options: ["latest magazine"],
+              options: ["latest magazine", "latest recording"],
               required: false
             }
           ]
         }
+    sortable_fields: ["order"]
   - name: page
     label: Pages
     label_singular: Page
@@ -43,7 +43,7 @@ collections:
       - name: functionality
         label: "Special functionality"
         widget: select
-        options: ["contact form", "list magazines", "list who's who", "list all pages"]
+        options: ["contact form", "list magazines", "list recordings", "list who's who", "list all pages"]
         required: false
   - name: magazine
     label: "Magazine"
@@ -51,6 +51,16 @@ collections:
     folder: content/herald
     create: true
     fields:
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: datetime, date_format: "MMMM YYYY", time_format: false }
       - { name: title, label: Title }
       - { name: pdf, label: PDF, widget: file }
+    sortable_fields: ["date"]
+  - name: recording
+    label: "Recordings"
+    description: "Recordings are listed on the recordings page, and the most-recently dated one is available over the phone."
+    folder: content/recordings
+    create: true
+    fields:
+      - { name: date, label: Date, widget: datetime, date_format: "dddd, Do MMMM YYYY", time_format: false }
+      - { name: mp3, label: Recording, widget: file }
+    sortable_fields: ["date"]
