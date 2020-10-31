@@ -61,6 +61,6 @@ collections:
     folder: content/recordings
     create: true
     fields:
-      - { name: date, label: Date, widget: datetime, date_format: "dddd Do MMMM YYYY", time_format: false }
+      - { name: date, label: Date, widget: datetime, date_format: "dddd, Do MMMM YYYY", time_format: false }
       - { name: audio, label: File, widget: file }
     sortable_fields: ["date"]
