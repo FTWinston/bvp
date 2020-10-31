@@ -51,7 +51,7 @@ collections:
     folder: content/herald
     create: true
     fields:
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: datetime, date_format: "MMMM YYYY", time_format: false }
       - { name: title, label: Title }
       - { name: pdf, label: PDF, widget: file }
     sortable_fields: ["date"]
@@ -61,6 +61,6 @@ collections:
     folder: content/recordings
     create: true
     fields:
-      - { name: date, label: Date, widget: datetime, date_format: "D MMMM YYYY", time_format: false }
+      - { name: date, label: Date, widget: datetime, date_format: "dddd Do MMMM YYYY", time_format: false }
       - { name: audio, label: File, widget: file }
     sortable_fields: ["date"]
