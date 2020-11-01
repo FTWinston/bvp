@@ -2,7 +2,7 @@
   siteMetadata: {
     title: `BVP Church of Scotland`,
     description: `Balshagray Victoria Park`,
-    siteUrl: `https://www.bvp.org.uk/`,
+    siteUrl: `https://bvp.org.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
