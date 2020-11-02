@@ -46,7 +46,7 @@ collections:
         options: ["contact form", "list magazines", "list recordings", "list who's who", "list all pages"]
         required: false
   - name: magazine
-    label: "Magazine"
+    label: Magazine
     description: "Magazines are listed on the archive page, and the most-recently dated one is accessible from the main page."
     folder: content/herald
     create: true
@@ -56,7 +56,9 @@ collections:
       - { name: pdf, label: PDF, widget: file }
     sortable_fields: ["date"]
   - name: recording
-    label: "Recordings"
+    summary: "{{date}}"
+    label: Recordings
+    label_singular: Recording
     description: "Recordings are listed on the recordings page, and the most-recently dated one is available over the phone."
     folder: content/recordings
     create: true
