@@ -3,8 +3,4 @@ title: Services at BVP
 image: /uploads/chancel-cropped.jpg
 order: 2
 ---
-## *We have now resumed our morning services, in a socially distanced manner. See the church magazine for details.*
-
-We meet for morning worship on Sundays at 11am. During our morning services, we have the J-Team for primary school children, and a Bible Class for secondary school children. Creche facilities are available for babies and toddlers.
-
-We also have an evening service at 6.30pm on the 1st, 3rd and 5th Sundays of the month during school terms.
+We meet for socially-distanced morning worship services on Sundays at 11am. These are led by our locum, Derek Peat. While many things have to be done differently at this time, all are welcome to attend. Additionally, recordings of our services are available on this website - see below.
