@@ -23,7 +23,7 @@ const HeraldArchive = () => (
     render={data => (
       <div className="items style1 medium onscroll-fade-in">
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
-          <a href={node.frontmatter.pdf} key={index}>
+          <a href={`/${node.frontmatter.pdf}`} key={index}>
             <span className="icon style2 major fa-file-pdf-o"></span>
             <p className="major">
               {node.frontmatter.title}

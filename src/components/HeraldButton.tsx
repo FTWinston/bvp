@@ -28,7 +28,7 @@ const HeraldButton = (props: IProps) => (
       const node = data.allMarkdownRemark.nodes[0];
       return (
       <li>
-        <a href={node.frontmatter.pdf} className="button big wide">
+        <a href={`/${node.frontmatter.pdf}`} className="button big wide">
           {props.text} ({node.frontmatter.title})
         </a>
       </li>

@@ -28,7 +28,7 @@ const RecordingButton = (props: IProps) => (
       const node = data.allMarkdownRemark.nodes[0];
       return (
       <li>
-        <a href={node.frontmatter.mp3} className="button big wide">
+        <a href={`/${node.frontmatter.mp3}`} className="button big wide">
           {props.text} ({node.frontmatter.date})
         </a>
       </li>
