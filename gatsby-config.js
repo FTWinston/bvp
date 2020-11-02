@@ -87,8 +87,8 @@
                 return Object.assign({}, node.frontmatter, {
                   description: `Recording of church service`,
                   date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.frontmatter.mp3.publicURL,
-                  guid: site.siteMetadata.siteUrl + node.frontmatter.mp3.publicURL,
+                  url: site.siteMetadata.siteUrl + node.frontmatter.mp3,
+                  guid: site.siteMetadata.siteUrl + node.frontmatter.mp3,
                 })
               })
             },
@@ -103,9 +103,7 @@
                     frontmatter{
                       title: date(formatString: "dddd, Do MMMM YYYY")
                       date
-                      mp3 {
-                        publicURL
-                      }
+                      mp3
                     }
                   }
                 }

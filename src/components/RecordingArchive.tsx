@@ -14,9 +14,7 @@ const RecordingArchive = () => (
           nodes {
             frontmatter{
               date(formatString: "dddd, Do MMMM YYYY")
-              mp3 {
-                publicURL
-              }
+              mp3
             }
           }
         }
@@ -25,7 +23,7 @@ const RecordingArchive = () => (
     render={data => (
       <div className="items style1 medium onscroll-fade-in">
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
-          <a href={node.frontmatter.mp3.publicURL} key={index}>
+          <a href={node.frontmatter.mp3} key={index}>
             <span className="icon style2 major fa-file-audio-o"></span>
             <p className="major">
               {node.frontmatter.date}
