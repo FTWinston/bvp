@@ -9,7 +9,7 @@ site_url: "https://www.bvp.org.uk"
 collections:
   - name: section
     label: Home page sections
-    label_singular: Home page section
+    label_singular: Section
     description: "The main page includes all sections listed here, ordered by their Sort Order property."
     folder: content/sections
     create: true
@@ -59,7 +59,7 @@ collections:
     summary: "{{date}}"
     label: Recordings
     label_singular: Recording
-    description: "Recordings are listed on the recordings page, and the most-recently dated one is available over the phone."
+    description: "Recordings are listed on the recordings page, and the most-recently dated one is available from the main page, and over the phone."
     folder: content/recordings
     create: true
     fields:
