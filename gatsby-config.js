@@ -89,6 +89,8 @@
           custom_elements: [
             { 'googleplay:owner': 'ftwinston@gmail.com' },
             { 'itunes:email': 'ftwinston@gmail.com' },
+            { 'googleplay:explicit': 'no' },
+            { 'itunes:explicit': 'no' },
             { 'language': 'en-gb' }
           ],
         }),
@@ -97,10 +99,14 @@
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
+                  title: node.frontmatter.date,
                   description: `Recording of church service`,
                   date: node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/${node.frontmatter.mp3}`,
-                  guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.mp3}`,
+                  guid: node.frontmatter.mp3,
+                  enclosure: {
+                    url: `${site.siteMetadata.siteUrl}/${node.frontmatter.mp3}`,
+                  }
                 })
               })
             },
@@ -123,7 +129,8 @@
             `,
             output: "/rss.xml",
             title: "Services at BVP Church of Scotland",
-            description: "Balshagray Victoria Park morning worship"
+            description: "Balshagray Victoria Park morning worship",
+            image_url: "https://bvp.org.uk/static/e3b362a3f948fcac3b137939f827f0b2/2244e/building-outside.jpg"
           },
         ],
       }
