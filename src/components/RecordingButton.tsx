@@ -28,9 +28,12 @@ const RecordingButton = (props: IProps) => (
       const node = data.allMarkdownRemark.nodes[0];
       return (
       <li>
-        <a href={`/${node.frontmatter.mp3}`} className="button big wide">
-          {props.text} ({node.frontmatter.date})
-        </a>
+        <figure>
+          <figcaption>{node.frontmatter.date}</figcaption>
+          <audio controls src={`/${node.frontmatter.mp3}`} preload="metadata">
+            <a href={`/${node.frontmatter.mp3}`}>Download</a>
+          </audio>
+        </figure>
       </li>
       )
     }}
