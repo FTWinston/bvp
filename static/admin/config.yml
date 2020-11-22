@@ -23,7 +23,7 @@ collections:
           name: functionality,
           label: "Special functionality",
           widget: select,
-          options: ["latest recoding"],
+          options: ["latest recording"],
           required: false
         }
       - { name: buttons, label: "Buttons", widget: list, fields: [
