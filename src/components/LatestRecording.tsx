@@ -25,8 +25,9 @@ const LatestRecording = () => (
       const node = data.allMarkdownRemark.nodes[0];
       return (
         <figure className="recording">
-          <figcaption>{`${node.frontmatter.date}`}</figcaption>
+          <figcaption className="recording__caption">Latest recording: <span className="recording__title">{`${node.frontmatter.date}`}</span></figcaption>
           <audio
+            className="recording__audio"
             controls
             preload="metadata"
             src={`/${node.frontmatter.mp3}`}>
