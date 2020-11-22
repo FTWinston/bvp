@@ -123,6 +123,7 @@
             `,
             output: "/rss.xml",
             title: "Services at BVP Church of Scotland",
+            description: "Balshagray Victoria Park morning worship"
           },
         ],
       }
