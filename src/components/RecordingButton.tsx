@@ -33,8 +33,10 @@ const RecordingButton = (props: IProps) => (
         <AudioPlayer
           src={`/${node.frontmatter.mp3}`}
           preload="metadata"
-          header={`/${node.frontmatter.mp3}`}
+          header={`/${node.frontmatter.date}`}
           className="button big wide"
+          customVolumeControls={[]}
+          layout="horizontal"
         />
       </li>
       )
