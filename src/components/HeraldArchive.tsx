@@ -25,7 +25,7 @@ const HeraldArchive = () => (
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
           <a href={`/${node.frontmatter.pdf}`} key={index}>
             <span className="icon style2 major fa-file-pdf-o"></span>
-            <p className="major">
+            <p className="major align-center">
               {node.frontmatter.title}
             </p>
           </a>
