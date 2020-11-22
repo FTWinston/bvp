@@ -25,7 +25,7 @@ const RecordingArchive = () => (
         {data.allMarkdownRemark.nodes.map((node, index: number) => (
           <a href={`/${node.frontmatter.mp3}`} key={index}>
             <span className="icon style2 major fa-file-audio-o"></span>
-            <p className="major">
+            <p className="major align-center">
               {node.frontmatter.date}
             </p>
           </a>

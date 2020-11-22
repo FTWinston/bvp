@@ -38,6 +38,7 @@ function SEO({ description, lang, meta, keywords, title }) {
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link type="application/rss+xml" rel="alternate" title="Services at BVP" href="/rss.xml"/>
       {keywordsTag}
       
       <noscript>{`<link rel="stylesheet" href="assets/css/noscript.css" />`}</noscript>

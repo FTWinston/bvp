@@ -2,10 +2,8 @@
 title: Service recordings
 image: /uploads/listen.jpg
 order: 5
+functionality: latest recording
 buttons:
-  - functionality: latest recording
-    target: /recording-archive
-    text: Listen now
   - target: /recording-archive
     text: View archive
 ---
