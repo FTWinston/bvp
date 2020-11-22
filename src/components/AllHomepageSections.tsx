@@ -25,6 +25,7 @@ export default () =>
               }
             }
           }
+          functionality
           buttons {
             text
             target
