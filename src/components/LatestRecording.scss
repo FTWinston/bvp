@@ -1,12 +1,19 @@
 .recording {
-  display: inline-block;
+    display: inline-block;
 
-  & figcaption {
+    & + * {
+        margin-top: 2rem;
+    }
+}
+
+.recording__caption {
     text-align: center;
-    color: #003057;
-  }
+}
 
-  & + * {
-    margin-top: 2rem;
-  }
+.recording__title {
+    color: #003057;
+}
+
+.recording__audio {
+   width: 100%;
 }
