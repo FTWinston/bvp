@@ -1,7 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/src/styles.scss';
 
 const LatestRecording = () => (
   <StaticQuery
@@ -25,12 +23,15 @@ const LatestRecording = () => (
     render={data => {
       const node = data.allMarkdownRemark.nodes[0];
       return (
-        <AudioPlayer
-          src={`/${node.frontmatter.mp3}`}
-          preload="metadata"
-          header={`${node.frontmatter.date}`}
-          customVolumeControls={[]}
-        />
+        <figure className="recording">
+          <figcaption>{`${node.frontmatter.date}`}</figcaption>
+          <audio
+            controls
+            preload="metadata"
+            src={`/${node.frontmatter.mp3}`}>
+              <a href={`/${node.frontmatter.mp3}`}>Download</a>
+          </audio>
+        </figure>
       )
     }}
   />
