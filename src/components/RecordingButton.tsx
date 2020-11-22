@@ -1,5 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/src/styles.scss';
 
 interface IProps {
   text: string;
@@ -28,12 +30,12 @@ const RecordingButton = (props: IProps) => (
       const node = data.allMarkdownRemark.nodes[0];
       return (
       <li>
-        <figure>
-          <figcaption>{node.frontmatter.date}</figcaption>
-          <audio controls src={`/${node.frontmatter.mp3}`} preload="metadata">
-            <a href={`/${node.frontmatter.mp3}`}>Download</a>
-          </audio>
-        </figure>
+        <AudioPlayer
+          src={`/${node.frontmatter.mp3}`}
+          preload="metadata"
+          header={`/${node.frontmatter.mp3}`}
+          className="button big wide"
+        />
       </li>
       )
     }}
