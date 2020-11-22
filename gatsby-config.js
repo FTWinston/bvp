@@ -80,6 +80,18 @@
           }
         }        
         `,
+        setup: options => ({
+          ...options,
+          custom_namespaces: {
+            itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+            googleplay: 'http://www.google.com/schemas/play-podcasts/1.0'
+          },
+          custom_elements: [
+            { 'googleplay:owner': 'ftwinston@gmail.com' },
+            { 'itunes:email': 'ftwinston@gmail.com' },
+            { 'language': 'en-gb' }
+          ],
+        }),
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
