@@ -1,0 +1,12 @@
+.recording {
+  display: inline-block;
+
+  & figcaption {
+    text-align: center;
+    color: #003057;
+  }
+
+  & + * {
+    margin-top: 2rem;
+  }
+}

@@ -5,6 +5,7 @@ import Button from './Button';
 import PageSection from './PageSection'
 import Title from './Title'
 import { FluidObject } from 'gatsby-image';
+import LatestRecording from './LatestRecording';
 
 export default () => 
 <StaticQuery
@@ -70,6 +71,11 @@ export default () =>
           <Button key={index} target={btn.target} functionality={btn.functionality}>{btn.text}</Button>
         )}
       </ul>
+    
+      const functionality = node.frontmatter.functionality === 'latest recording'
+        ? <LatestRecording />
+        : undefined;
+
       
       return (
         <PageSection
@@ -77,12 +83,12 @@ export default () =>
           innerClassName={innerClass}
           image={image}
           id={id}
-          functionality={node.functionality}
           key={index}
           isFirst={index === 0}
         >
           {title}
           {content}
+          {functionality}
           {buttons}
         </PageSection>
       )
