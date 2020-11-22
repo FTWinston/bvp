@@ -76,6 +76,7 @@ export default () =>
           innerClassName={innerClass}
           image={image}
           id={id}
+          functionality={node.functionality}
           key={index}
           isFirst={index === 0}
         >
