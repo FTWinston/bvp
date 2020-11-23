@@ -99,7 +99,7 @@
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
-                  title: Date.parse(node.frontmatter.date).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+                  title: new Date(node.frontmatter.date).toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
                   description: `Recording of church service`,
                   date: node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/${node.frontmatter.mp3}`,
