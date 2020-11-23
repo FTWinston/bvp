@@ -99,7 +99,7 @@
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
-                  title: node.frontmatter.date,
+                  title: node.frontmatter.date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' }),
                   description: `Recording of church service`,
                   date: node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/${node.frontmatter.mp3}`,
@@ -130,6 +130,7 @@
             output: "/rss.xml",
             title: "Services at BVP Church of Scotland",
             description: "Balshagray Victoria Park morning worship",
+            site_url: site.siteMetadata.siteUrl,
             image_url: "https://bvp.org.uk/static/e3b362a3f948fcac3b137939f827f0b2/2244e/building-outside.jpg"
           },
         ],
