@@ -128,8 +128,8 @@
               }
             `,
             output: "/rss.xml",
-            title: "Services at BVP Church of Scotland",
-            description: "Balshagray Victoria Park morning worship",
+            title: "Balshagray Victoria Park church",
+            description: "Morning worship services at BVP Church of Scotland",
             site_url: "https://bvp.org.uk",
             image_url: "https://bvp.org.uk/static/e3b362a3f948fcac3b137939f827f0b2/2244e/building-outside.jpg"
           },

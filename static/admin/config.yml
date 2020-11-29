@@ -18,14 +18,6 @@ collections:
       - { name: body, label: Body, widget: markdown }
       - { name: image, label: Image, widget: image, required: false }
       - { name: order, label: "Sort order", widget: number, valueType: int }
-      
-      - {
-          name: functionality,
-          label: "Special functionality",
-          widget: select,
-          options: ["latest recording"],
-          required: false
-        }
       - { name: buttons, label: "Buttons", widget: list, fields: [
             { name: text, label: Text, widget: string },
             { name: target, label: "Target URL or ID", widget: string },
@@ -33,7 +25,7 @@ collections:
               name: functionality,
               label: "Special functionality",
               widget: select,
-              options: ["latest magazine"],
+              options: ["latest magazine", "latest recording"],
               required: false
             }
           ]
