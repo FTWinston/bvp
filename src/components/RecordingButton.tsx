@@ -1,8 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import './LatestRecording.scss';
 
-const LatestRecording = () => (
+interface IProps {
+  text: string;
+}
+
+const RecordingButton = (props: IProps) => (
   <StaticQuery
     query={graphql`
       query {
@@ -24,19 +27,14 @@ const LatestRecording = () => (
     render={data => {
       const node = data.allMarkdownRemark.nodes[0];
       return (
-        <figure className="recording">
-          <figcaption className="recording__caption">Latest recording: <span className="recording__title">{`${node.frontmatter.date}`}</span></figcaption>
-          <audio
-            className="recording__audio"
-            controls
-            preload="metadata"
-            src={`/${node.frontmatter.mp3}`}>
-              <a href={`/${node.frontmatter.mp3}`}>Download</a>
-          </audio>
-        </figure>
+      <li>
+        <a href={`/${node.frontmatter.mp3}`} className="button big wide">
+          {props.text} ({node.frontmatter.date})
+        </a>
+      </li>
       )
     }}
   />
 )
 
-export default LatestRecording
+export default RecordingButton
