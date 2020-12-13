@@ -1,7 +1,7 @@
 ---
 title: Service recordings
 image: /uploads/listen.jpg
-order: 5
+order: 50
 buttons:
   - functionality: latest recording
     target: /recording-archive
