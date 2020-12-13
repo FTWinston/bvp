@@ -1,7 +1,7 @@
 ---
 title: Church magazine
 image: /uploads/herald.jpg
-order: 4
+order: 40
 buttons:
   - functionality: latest magazine
     target: /herald-magazine-archive
