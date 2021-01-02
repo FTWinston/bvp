@@ -18,6 +18,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     fmImagesToRelative(node);
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
+      type frontmatter implements Node {
+        video: String
+      }
+    `
+    createTypes(typeDefs)
+}
+
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
 
