@@ -21,6 +21,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createSchemaCustomization = ({ actions }) => {
     const { createTypes } = actions
     const typeDefs = `
+      type MarkdownRemarkFrontmatter implements Node {
+        video: String
+      }
       type frontmatter implements Node {
         video: String
       }
