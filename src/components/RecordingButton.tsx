@@ -19,6 +19,7 @@ const RecordingButton = (props: IProps) => (
             frontmatter{
               date(formatString: "Do MMMM")
               mp3
+              video
             }
           }
         }
@@ -26,10 +27,17 @@ const RecordingButton = (props: IProps) => (
     `}
     render={data => {
       const node = data.allMarkdownRemark.nodes[0];
+      const url = node.frontmatter.video
+        ? node.frontmatter.video
+        : `/${node.frontmatter.mp3}`;
+      const label = node.frontmatter.video
+        ? 'Watch now'
+        : 'Listen now';
+
       return (
       <li>
-        <a href={`/${node.frontmatter.mp3}`} className="button big wide">
-          {props.text} ({node.frontmatter.date})
+        <a href={url} className="button big wide">
+          {label} ({node.frontmatter.date})
         </a>
       </li>
       )

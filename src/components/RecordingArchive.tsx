@@ -15,6 +15,7 @@ const RecordingArchive = () => (
             frontmatter{
               date(formatString: "dddd, Do MMMM YYYY")
               mp3
+              video
             }
           }
         }
@@ -22,14 +23,22 @@ const RecordingArchive = () => (
     `}
     render={data => (
       <div className="items style1 medium onscroll-fade-in">
-        {data.allMarkdownRemark.nodes.map((node, index: number) => (
-          <a href={`/${node.frontmatter.mp3}`} key={index}>
-            <span className="icon style2 major fa-file-audio-o"></span>
+        {data.allMarkdownRemark.nodes.map((node, index: number) => {
+          const url = node.frontmatter.video
+            ? node.frontmatter.video
+            : `/${node.frontmatter.mp3}`;
+          const icon = node.frontmatter.video
+            ? 'icon style2 major fa-youtube'
+            : 'icon style2 major fa-file-audio-o';
+
+          return (
+          <a href={url} key={index}>
+            <span className={icon}></span>
             <p className="major align-center">
               {node.frontmatter.date}
             </p>
           </a>
-        ))}
+        )})}
       </div>
     )}
   />

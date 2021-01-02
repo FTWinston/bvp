@@ -64,5 +64,6 @@ collections:
     create: true
     fields:
       - { name: date, label: Date, widget: datetime, date_format: "dddd, Do MMMM YYYY", time_format: false }
-      - { name: mp3, label: Recording, widget: file }
+      - { name: mp3, label: Audio recording, widget: file }
+      - { name: video, label: YouTube link, widget: string, required: false }
     sortable_fields: ["date"]
