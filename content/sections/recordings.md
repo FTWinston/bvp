@@ -9,4 +9,6 @@ buttons:
   - target: /recording-archive
     text: View archive
 ---
-Recordings of our church services are available to watch or listen to online. You can also listen to the latest recording by phoning **0141 465 4333**.
+As we aren't currently meeting in person, we have begun producing online services. [These can be viewed here](https://www.youtube.com/channel/UCzOIyHFSwtPjI6jrDuHefcQ), and the latest service is also available below.
+
+When we meet in person, recordings of our church services are available to listen to online. You can also listen to the latest recording or online service by phoning **0141 465 4333**.
