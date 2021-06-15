@@ -1,6 +1,8 @@
 ---
 title: Sound desk help
 ---
+This is a brief guide on how to run the audio-visual system during a typical service. Suggestions welcome!
+
 ## In advance
 
 The hymns and any powerpoint presentations etc should be prepared in an Easy Worship presentation file.
