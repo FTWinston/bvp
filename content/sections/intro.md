@@ -6,6 +6,8 @@ buttons:
   - target: "#section2"
     text: Explore
 ---
-Welcome to BVP. We are a Church of Scotland located in the west end of Glasgow.
+Balshagaray Victoria Park was a Church of Scotland located in the west end of Glasgow.
 
-Our aim is to _'Know Christ and to make Him known.'_
+We have recently merged with Partick South church to form [Partick Victoria Park Church](https://partickvictoriaparkchurch.org.uk/).
+
+The Balshagray building is not being used for regular services. Visit our new church's website for more information.
