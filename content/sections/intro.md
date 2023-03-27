@@ -3,8 +3,8 @@ title: Intro
 image: /uploads/building-outside.jpg
 order: 10
 buttons:
-  - target: "#section2"
-    text: Explore
+  - target: "https://partickvictoriaparkchurch.org.uk/"
+    text: Visit new site
 ---
 Balshagaray Victoria Park was a Church of Scotland located in the west end of Glasgow.
 
