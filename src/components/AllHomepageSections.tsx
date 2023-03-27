@@ -28,7 +28,6 @@ export default () =>
           buttons {
             text
             target
-            functionality
           }
         }
         html
@@ -66,7 +65,7 @@ export default () =>
         ? undefined
         : <ul className="actions">
         {node.frontmatter.buttons.map((btn, index: number) =>
-          <Button key={index} target={btn.target} functionality={btn.functionality}>{btn.text}</Button>
+          <Button key={index} target={btn.target}>{btn.text}</Button>
         )}
       </ul>
       

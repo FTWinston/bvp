@@ -21,13 +21,6 @@ collections:
       - { name: buttons, label: "Buttons", widget: list, fields: [
             { name: text, label: Text, widget: string },
             { name: target, label: "Target URL or ID", widget: string },
-            {
-              name: functionality,
-              label: "Special functionality",
-              widget: select,
-              options: ["latest magazine", "latest recording"],
-              required: false
-            }
           ]
         }
     sortable_fields: ["order"]
